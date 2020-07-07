@@ -9,12 +9,97 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
+
+div {
+  border: 1px solid red;
+}
+
+
 .header {
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
+  background-color: #f2f2f2;
+  display: flex;
+  position: relative;
   /* выше установили ограничения для секции */
 }
+
+/* .header_box {
+  width: 100%
+  height: 100%;
+} */
+
+.centered-block {
+  margin: auto;
+}
+
+.logo_place_header {
+  position: absolute;
+  top: 30px;
+  left: 64px;
+  z-index: 1;
+}
+
+.header_title {
+  font-size: 102px;
+  font-weight: bold;
+  margin-left: 64px;
+  width: 730px;
+}
+
+.header_title_place {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  height: 100%;
+}
+
+.header_subtitle {
+  position: absolute;
+  width: 388px;
+  left: 64px;
+  bottom: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  z-index: 1;
+}
+
+
+.header_main_illustration {
+  position: absolute;
+  width: 765px;
+  height: 608px;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.header_square-pic {
+  position: absolute;
+  background-color: #2f80ed;
+  width: 568px;
+  height: 568px;
+  top: 64px;
+  right: 0;
+  z-index: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+.content {
+  background-color: yellow;
+  height: 200px;
+}
+
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
