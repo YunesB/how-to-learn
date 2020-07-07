@@ -14,6 +14,12 @@ div {
   border: 1px solid red;
 }
 
+section {
+  border: 1px green;
+}
+
+.link {
+}
 
 .header {
   height: 100vh;
@@ -22,13 +28,9 @@ div {
   background-color: #f2f2f2;
   display: flex;
   position: relative;
+  font-color: #000;
   /* выше установили ограничения для секции */
 }
-
-/* .header_box {
-  width: 100%
-  height: 100%;
-} */
 
 .centered-block {
   margin: auto;
@@ -38,7 +40,7 @@ div {
   position: absolute;
   top: 30px;
   left: 64px;
-  z-index: 1;
+  z-index: 3;
 }
 
 .header_title {
@@ -46,6 +48,8 @@ div {
   font-weight: bold;
   margin-left: 64px;
   width: 730px;
+  line-height: 96px;
+  z-index: 2;
 }
 
 .header_title_place {
@@ -61,10 +65,10 @@ div {
   left: 64px;
   bottom: 30px;
   font-size: 18px;
+  line-height: 25px;
   font-weight: normal;
-  z-index: 1;
+  z-index: 2;
 }
-
 
 .header_main_illustration {
   position: absolute;
@@ -88,17 +92,127 @@ div {
 
 
 
+/* Main content */
+/* Секция, блок description */
 
-
-
-
-
-
+p {
+  margin: 0;
+  padding: 0;
+}
 
 .content {
-  background-color: yellow;
-  height: 200px;
+  background-color: white;
+  z-index: 2;
 }
+
+.two-columns {
+  display: flex;
+  width: 80%;
+  padding: 100px 0;
+  justify-content: space-between;
+}
+
+.description-left {
+  width: 175px;
+  margin: 0;
+}
+
+.description-right {
+  min-width: 784px;
+  width: 80%;
+  align-items: left;
+}
+
+.description_header {
+  color: #2f80ed;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.span_accent {
+  font-weight: bold;
+  margin: 30px 0;
+}
+
+.two-columns_text {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
+  line-height: 34px;
+}
+
+
+/* Секция, блок digits */
+
+.digits {
+  justify-content: center;
+  width: 100%;
+  padding: 100px 0;
+}
+
+.digits_text_center {
+  margin: auto;
+  width: 60%;
+  text-align: center;
+}
+
+.digits_title_text {
+  font-size: 60px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 69px;
+}
+
+.digits_subtitle_text {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
+  line-height: 34px;
+}
+
+.digits_block_margin {
+  margin-top: 20px;
+}
+
+.digits_table {
+  margin: auto;
+  width: 1100px;
+  display: flex;
+  flex: 1 0 21%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.digits_cell {
+  width: 250px;
+  margin: 30px 0;
+}
+
+.digits_table_heading {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.15;
+}
+
+.digits_table_text {
+  margin: 0;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.digits_table_citation {
+  margin-top: 20px;
+}
+
+
+
+
+
 
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
