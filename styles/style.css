@@ -18,7 +18,21 @@ section {
   border: 1px green;
 }
 
-.link {
+/* links, информация взята с сайта: https://www.w3schools.com/css/css_link.asp */;
+
+a:visited {
+  color: #2f80ed;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1f1f1f;
+  text-decoration: none;
+}
+
+.header_link {
+  color: #2f80ed;
+  text-decoration: none;
 }
 
 .header {
@@ -88,7 +102,6 @@ section {
   right: 0;
   z-index: 0;
 }
-
 
 
 
@@ -208,6 +221,17 @@ p {
 .digits_table_citation {
   margin-top: 20px;
 }
+
+
+/* Секция, блок feynman */
+
+.feynman {
+  justify-content: center;
+  width: 100%;
+  padding-top: 100px;
+}
+
+
 
 
 
