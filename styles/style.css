@@ -174,7 +174,7 @@ p {
 .digits {
   justify-content: center;
   width: 100%;
-  padding: 100px 0;
+  padding: 40px 0;
 }
 
 .digits__text_center {
@@ -212,7 +212,7 @@ p {
 
 .digits__cell {
   width: 250px;
-  margin: 30px 0;
+  margin: 60px 0;
 }
 
 .digits__table_heading {
@@ -342,22 +342,24 @@ a.feynman__link:hover {
   line-height: 34px;
 }
 
-.kaufman__block_margin {
+.kaufman__subtitle_margin {
   margin-top: 20px;
 }
 
 .kaufman__table {
-  margin: auto;
+  margin: 0 auto;
   width: 1100px;
   display: flex;
   flex: 1 0 21%;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding-bottom: 10px;
+  padding-top: 80px;
 }
 
 .kaufman__cell {
   width: 200px;
-  margin: 30px 0;
+  margin-bottom: 80px;
 }
 
 .kaufman__table_heading {
