@@ -6,7 +6,7 @@
   /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif !important;
 }
 
 
@@ -18,7 +18,8 @@ section {
   border: 1px green;
 }
 
-/* links, информация взята с сайта: https://www.w3schools.com/css/css_link.asp */;
+/* links, код по ссылкам взят с сайта: https://www.w3schools.com/css/css_link.asp 
+Не уверен, счиитается ли такое заимствование плагиатом. Надеюсь, что нет :) */;
 
 a:visited {
   color: #2f80ed;
@@ -29,6 +30,8 @@ a:hover {
   color: #1f1f1f;
   text-decoration: none;
 }
+
+/* Дальше уже только мой код */
 
 .header_link {
   color: #2f80ed;
@@ -227,22 +230,22 @@ p {
 
 .feynman {
   display: flex;
+  position: relative;
   width: 100%;
   height: 790px;
   padding-top: 100px;
 }
 
 .feynman_text_center {
-  justify-content: center;
   text-align: center;
   z-index: 2;
 }
 
 .feynman_title_text {
+  margin: auto;
   width: 648px;
   font-size: 120px;
   font-weight: bold;
-  margin: 0;
   line-height: 1.15;
   margin-bottom: 70px;
   z-index: 2;
@@ -251,15 +254,27 @@ p {
 .feynman_subtitle_text {
   font-size: 36px;
   font-weight: normal;
-  margin: 0;
   line-height: 51px;
   z-index: 2;
 }
 
+/* Это чтобы текст (в моем браузере, как минимум) выглядела как на макете 
+Можно удалить, если нет в этом необходимости */
+
+.feynman_subtitle_margin {
+  margin-bottom: 55%
+}
+
+
+
 .feynman_link {
-  margin-left:auto; 
-  margin-right:0;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  margin: 0;
   z-index: 2;
+  right: 0;
+  top: 50%;
 }
 
 .feynman_bg {
@@ -269,6 +284,122 @@ p {
   background-width: 867px;
   background-height: 637px;
 }
+
+
+/* Секция, блок kaufman */
+/* Почему-то слетает форматирование по .page, проверить*/
+
+.kaufman {
+  position: relative;
+  background-color: #1f1f1f;
+  justify-content: center;
+  width: 100%;
+  padding: 90px 0;
+  color: white;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.kaufman_text_center {
+  margin: auto;
+  width: 60%;
+  text-align: center;
+}
+
+.kaufman_title_text {
+  font-size: 60px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 69px;
+}
+
+.kaufman_subtitle_text {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
+  line-height: 34px;
+}
+
+.kaufman_block_margin {
+  margin-top: 20px;
+}
+
+.kaufman_table {
+  margin: auto;
+  width: 1100px;
+  display: flex;
+  flex: 1 0 21%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.kaufman_cell {
+  width: 250px;
+  margin: 30px 0;
+}
+
+.kaufman_table_heading {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.15;
+}
+
+.kaufman_table_text {
+  margin: 0;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.kaufman_table_citation {
+  margin-top: 20px;
+}
+
+.kaufman_triangle_image {
+  width: 877px;
+  height: 877px;
+  position: absolute;
+  top: 0; 
+  right: -210px;
+  z-index: -1;
+}
+
+/* Я подумал, нужно самому нарисовать триугольник, так и не понял как его повернуть :);
+
+#triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px #2f80ed;
+  z-index: 1;
+}
+
+*/
+
+
+/* Подвал сайта, блок footer */
+
+.footer {
+  width: 100%;
+  min-height: 350px;
+  background-color: #1f1f1f;
+  justify-content: center;
+}
+
+.footer_columns {
+  width: 90%;
+  display: flex;
+  
+
+}
+
+
+
+
+
 
 
 
