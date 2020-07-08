@@ -14,9 +14,6 @@ div {
   border: 1px solid red;
 }
 
-section {
-  border: 1px green;
-}
 
 /* links, код по ссылкам взят с сайта: https://www.w3schools.com/css/css_link.asp 
 Не уверен, счиитается ли такое заимствование плагиатом. Надеюсь, что нет :) */;
@@ -53,11 +50,32 @@ a:hover {
   margin: auto;
 }
 
+/* Не совсем понял, что имелось ввиду под 
+"Блок logo, модификатор place со значением footer. Используйте
+повторно компонент из секции header, уникальное изображение
+присвойте модификатору. (стр. 17)"
+Проблема в том, что логотип в хедере и футере - разные картинки.
+
+.logo_image_header {
+  content: url(../images/logo_place_header.svg);
+}
+
+.logo_image_footer {
+  content: url(../images/logo_place_footer.svg);
+}
+
+*/
+
 .logo_place_header {
   position: absolute;
   top: 30px;
   left: 64px;
   z-index: 3;
+}
+
+.logo_yandex_size {
+  height: 35px;
+  width: 183px;
 }
 
 .header_title {
@@ -229,6 +247,7 @@ p {
 /* Секция, блок feynman */
 
 .feynman {
+  background-color: #f2f2f2;
   display: flex;
   position: relative;
   width: 100%;
@@ -258,14 +277,14 @@ p {
   z-index: 2;
 }
 
-/* Это чтобы текст (в моем браузере, как минимум) выглядела как на макете 
+/* Этот margin нужен, чтобы текст (в моем браузере, как минимум) выглядела как на макете 
 Можно удалить, если нет в этом необходимости */
 
 .feynman_subtitle_margin {
   margin-bottom: 55%
 }
 
-
+/* ----------------------------- */
 
 .feynman_link {
   display: flex;
@@ -366,19 +385,6 @@ p {
   z-index: -1;
 }
 
-/* Я подумал, нужно самому нарисовать триугольник, так и не понял как его повернуть :);
-
-#triangle-up {
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 100px #2f80ed;
-  z-index: 1;
-}
-
-*/
-
 
 /* Подвал сайта, блок footer */
 
@@ -386,14 +392,72 @@ p {
   width: 100%;
   min-height: 350px;
   background-color: #1f1f1f;
-  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 40px;
 }
 
 .footer_columns {
-  width: 90%;
+  min-height: 250px;
   display: flex;
-  
+  width: 90%;
 
+}
+
+.footer_colums_copyright {
+  display: block;
+  align-items: top;
+  width: 50%;
+  position: relative;
+}
+
+.footer_author_row {
+ position: absolute;
+ bottom: 0;
+}
+
+.footer_author {
+  color: white;
+  margin: 18px 0;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+
+
+.footer_columns_info {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_columns_info_margin {
+  margin-left: 40%;
+}
+
+.footer_columns_text {
+  color: white;
+  margin: 0;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.footer_columns_text_margin {
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+.footer_heading_text {
+  font-weight: bold;
+}
+
+.footer_link {
+  color: white;
+  text-decoration: none;
+}
+
+.footer_social_icons {
+  height: 16px;
+  width: 16px;
 }
 
 
