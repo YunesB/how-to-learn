@@ -1,19 +1,9 @@
 .page {
   min-width: 1100px;
-  /* мы ещё не умеем делать мобильную версию сайта, */
-  /* поэтому выше установлена минимальная ширина страницы */
   max-width: 1600px;
-  /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
-  /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif !important;
 }
-
-
-div {
-  border: 1px solid red;
-}
-
 
 /* links, код по ссылкам взят с сайта: https://www.w3schools.com/css/css_link.asp 
 Не уверен, счиитается ли такое заимствование плагиатом. Надеюсь, что нет :) */;
@@ -30,7 +20,10 @@ a:hover {
 
 /* Дальше уже только мой код */
 
-.header_link {
+/* Ещё не до конца понимаю, как правильно использовать БЭМ,
+ буду признателен, если сможете дать небольшую наводку. */
+
+.header__link {
   color: #2f80ed;
   text-decoration: none;
 }
@@ -43,7 +36,6 @@ a:hover {
   display: flex;
   position: relative;
   font-color: #000;
-  /* выше установили ограничения для секции */
 }
 
 .centered-block {
@@ -78,7 +70,7 @@ a:hover {
   width: 183px;
 }
 
-.header_title {
+.header__title {
   font-size: 102px;
   font-weight: bold;
   margin-left: 64px;
@@ -87,14 +79,14 @@ a:hover {
   z-index: 2;
 }
 
-.header_title_place {
+.header__title_place {
   display: flex;
   align-items: center;
   align-self: center;
   height: 100%;
 }
 
-.header_subtitle {
+.header__subtitle {
   position: absolute;
   width: 388px;
   left: 64px;
@@ -105,7 +97,7 @@ a:hover {
   z-index: 2;
 }
 
-.header_main_illustration {
+.header__main_illustration {
   position: absolute;
   width: 765px;
   height: 608px;
@@ -114,7 +106,7 @@ a:hover {
   z-index: 1;
 }
 
-.header_square-pic {
+.header__square-pic {
   position: absolute;
   background-color: #2f80ed;
   width: 568px;
@@ -146,15 +138,14 @@ p {
   justify-content: space-between;
 }
 
-.description-left {
+.two-columns__brief {
   width: 175px;
   margin: 0;
 }
 
-.description-right {
+.two-columns__brief_main-text {
   min-width: 784px;
   width: 80%;
-  align-items: left;
 }
 
 .description_header {
@@ -165,12 +156,12 @@ p {
   line-height: 1.2;
 }
 
-.span_accent {
+.two-columns__span-accent {
   font-weight: bold;
   margin: 30px 0;
 }
 
-.two-columns_text {
+.two-columns__paragraphs {
   font-size: 24px;
   font-weight: normal;
   margin: 0;
@@ -186,31 +177,31 @@ p {
   padding: 100px 0;
 }
 
-.digits_text_center {
+.digits__text_center {
   margin: auto;
   width: 60%;
   text-align: center;
 }
 
-.digits_title_text {
+.digits__title_text {
   font-size: 60px;
   font-weight: bold;
   margin: 0;
   line-height: 69px;
 }
 
-.digits_subtitle_text {
+.digits__subtitle_text {
   font-size: 24px;
   font-weight: normal;
   margin: 0;
   line-height: 34px;
 }
 
-.digits_block_margin {
+.digits__block_margin {
   margin-top: 20px;
 }
 
-.digits_table {
+.digits__table {
   margin: auto;
   width: 1100px;
   display: flex;
@@ -219,12 +210,12 @@ p {
   flex-wrap: wrap;
 }
 
-.digits_cell {
+.digits__cell {
   width: 250px;
   margin: 30px 0;
 }
 
-.digits_table_heading {
+.digits__table_heading {
   margin: 0;
   font-size: 24px;
   font-weight: bold;
@@ -232,14 +223,14 @@ p {
   line-height: 1.15;
 }
 
-.digits_table_text {
+.digits__table_text {
   margin: 0;
   font-size: 18px;
   font-weight: normal;
   line-height: 1.2;
 }
 
-.digits_table_citation {
+.digits__table_citation {
   margin-top: 20px;
 }
 
@@ -255,12 +246,12 @@ p {
   padding-top: 100px;
 }
 
-.feynman_text_center {
+.feynman__text_center {
   text-align: center;
   z-index: 2;
 }
 
-.feynman_title_text {
+.feynman__title_text {
   margin: auto;
   width: 648px;
   font-size: 120px;
@@ -270,43 +261,55 @@ p {
   z-index: 2;
 }
 
-.feynman_subtitle_text {
+.feynman__subtitle_text {
+  color: #000;
+  text-decoration: none;
   font-size: 36px;
   font-weight: normal;
   line-height: 51px;
   z-index: 2;
 }
 
-/* Этот margin нужен, чтобы текст (в моем браузере, как минимум) выглядела как на макете 
-Можно удалить, если нет в этом необходимости */
+/* Этот margin нужен, чтобы текст (в моем браузере, как минимум) выглядела как на макете. 
+Можно удалить, если в этом нет необходимости. Этот пункт написан в ответ на комментарий на странице 12:
+"В вашей вёрстке внешний вид секции может отличаться от прототипа. Ссылка может располагаться не на
+одном уровне с подзаголовком." */
 
-.feynman_subtitle_margin {
+.feynman__subtitle_margin {
   margin-bottom: 55%
 }
 
 /* ----------------------------- */
 
-.feynman_link {
-  display: flex;
-  align-items: center;
+
+
+.feynman__link {
+  white-space: nowrap;
   position: absolute;
-  margin: 0;
+  margin-right: 48px;
   z-index: 2;
   right: 0;
   top: 50%;
 }
 
-.feynman_bg {
+a.feynman__link:hover {
+    color: #2f80ed;
+    text-decoration: none;
+}
+
+
+.feynman__bg {
   background-image: url(../images/feynman.png);
   background-repeat: no-repeat;
   background-position: left bottom;
-  background-width: 867px;
-  background-height: 637px;
+  background-size: 867px 637px;
 }
 
 
 /* Секция, блок kaufman */
-/* Почему-то слетает форматирование по .page, проверить*/
+/* Если я правильно понимаю, то этот блок полностью можно было использовать на базе секции "digits", 
+но, видимо также нужно оптимизировать код для таблицы, чтобы он был универсальным. 
+Если все так, хочу сначала дождаться Ваших комментариев и исправить все разом. */
 
 .kaufman {
   position: relative;
@@ -319,31 +322,31 @@ p {
   z-index: 0;
 }
 
-.kaufman_text_center {
+.kaufman__text_center {
   margin: auto;
   width: 60%;
   text-align: center;
 }
 
-.kaufman_title_text {
+.kaufman__title_text {
   font-size: 60px;
   font-weight: bold;
   margin: 0;
   line-height: 69px;
 }
 
-.kaufman_subtitle_text {
+.kaufman__subtitle_text {
   font-size: 24px;
   font-weight: normal;
   margin: 0;
   line-height: 34px;
 }
 
-.kaufman_block_margin {
+.kaufman__block_margin {
   margin-top: 20px;
 }
 
-.kaufman_table {
+.kaufman__table {
   margin: auto;
   width: 1100px;
   display: flex;
@@ -352,12 +355,12 @@ p {
   flex-wrap: wrap;
 }
 
-.kaufman_cell {
-  width: 250px;
+.kaufman__cell {
+  width: 200px;
   margin: 30px 0;
 }
 
-.kaufman_table_heading {
+.kaufman__table_heading {
   margin: 0;
   font-size: 24px;
   font-weight: bold;
@@ -365,18 +368,18 @@ p {
   line-height: 1.15;
 }
 
-.kaufman_table_text {
+.kaufman__table_text {
   margin: 0;
   font-size: 18px;
   font-weight: normal;
   line-height: 1.2;
 }
 
-.kaufman_table_citation {
+.kaufman__table_citation {
   margin-top: 20px;
 }
 
-.kaufman_triangle_image {
+.kaufman__triangle_image {
   width: 877px;
   height: 877px;
   position: absolute;
@@ -396,26 +399,25 @@ p {
   padding-bottom: 40px;
 }
 
-.footer_columns {
+.footer__columns {
   min-height: 250px;
   display: flex;
   width: 90%;
 
 }
 
-.footer_colums_copyright {
+.footer__colums_copyright {
   display: block;
-  align-items: top;
   width: 50%;
   position: relative;
 }
 
-.footer_author_row {
+.footer__author_row {
  position: absolute;
  bottom: 0;
 }
 
-.footer_author {
+.footer__author {
   color: white;
   margin: 18px 0;
   font-size: 18px;
@@ -423,65 +425,46 @@ p {
 }
 
 
-
-.footer_columns_info {
+.footer__columns_info {
   width: 50%;
   display: flex;
   justify-content: space-between;
 }
 
-.footer_columns_info_margin {
+.footer__columns_info_margin {
   margin-left: 40%;
 }
 
-.footer_columns_text {
+.footer__columns_text {
   color: white;
   margin: 0;
   font-size: 18px;
   line-height: 30px;
 }
 
-.footer_columns_text_margin {
+.footer__columns_text_margin {
   margin-top: 20px;
   margin-bottom: 16px;
 }
 
-.footer_heading_text {
+.footer__column-heading {
   font-weight: bold;
 }
 
-.footer_link {
+.footer__column-link {
   color: white;
   text-decoration: none;
 }
 
-.footer_social_icons {
+.footer__social-icon {
   height: 16px;
   width: 16px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
-.header__square-pic {
-  height: 568px;
-  width: 568px;
+a.footer__column-link:hover {
+    color: #2f80ed;
+    text-decoration: none;
 }
 
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
-}
+
+/* Благодарю за проверку! */
