@@ -117,14 +117,6 @@ a.header__link:hover {
 .two-columns__brief {
   width: 175px;
   margin: 0;
-}
-
-.two-columns__brief_main-text {
-  min-width: 784px;
-  width: 80%;
-}
-
-.description_header {
   color: #2f80ed;
   font-size: 18px;
   font-weight: normal;
@@ -132,12 +124,17 @@ a.header__link:hover {
   line-height: 1.2;
 }
 
+.two-columns__brief_main-text {
+  min-width: 784px;
+  width: 80%;
+}
+
 .two-columns__span-accent {
   font-weight: bold;
   margin: 30px 0;
 }
 
-.two-columns__paragraphs {
+.two-columns__paragraph {
   font-size: 24px;
   font-weight: normal;
   margin: 0;
@@ -159,14 +156,14 @@ a.header__link:hover {
   text-align: center;
 }
 
-.digits__title_text {
+.digits__title {
   font-size: 60px;
   font-weight: bold;
   margin: 0;
   line-height: 69px;
 }
 
-.digits__subtitle_text {
+.digits__subtitle {
   font-size: 24px;
   font-weight: normal;
   margin: 0;
@@ -233,7 +230,7 @@ a.feynman__link:hover {
   margin: auto;
 }
 
-.feynman__title_text {
+.feynman__title {
   margin: auto;
   width: 648px;
   font-size: 120px;
@@ -243,7 +240,7 @@ a.feynman__link:hover {
   z-index: 2;
 }
 
-.feynman__subtitle_text {
+.feynman__subtitle {
   color: #000;
   text-decoration: none;
   font-size: 36px;
@@ -306,14 +303,14 @@ a.feynman__link:hover {
   text-align: center;
 }
 
-.kaufman__title_text {
+.kaufman__title {
   font-size: 60px;
   font-weight: bold;
   margin: 0;
   line-height: 69px;
 }
 
-.kaufman__subtitle_text {
+.kaufman__subtitle {
   font-size: 24px;
   font-weight: normal;
   margin: 0;
