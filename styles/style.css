@@ -5,6 +5,14 @@
   font-family: 'Helvetica Neue', Arial, sans-serif !important;
 }
 
+div {
+  border: 1px solid red;
+}
+
+nav {
+  border: 1px solid red;
+}
+
 .header__link {
   color: #2f80ed;
   text-decoration: none;
@@ -288,7 +296,7 @@ a.feynman__link:hover {
   background-color: #1f1f1f;
   justify-content: center;
   width: 100%;
-  padding: 90px 0;
+  padding-top: 90px;
   color: white;
   overflow: hidden;
   z-index: 0;
@@ -349,10 +357,6 @@ a.feynman__link:hover {
   line-height: 1.2;
 }
 
-.kaufman__table_citation {
-  margin-top: 20px;
-}
-
 .kaufman__triangle_image {
   width: 877px;
   height: 877px;
@@ -367,7 +371,6 @@ a.feynman__link:hover {
 
 .footer {
   width: 100%;
-  min-height: 350px;
   background-color: #1f1f1f;
   padding-top: 60px;
   padding-bottom: 40px;
@@ -378,38 +381,39 @@ a.feynman__link:hover {
   display: flex;
   width: 90%;
   margin: auto;
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
-.footer__columns_content_copyright {
+.footer__column_content_copyright {
   display: block;
   width: 50%;
   position: relative;
 }
 
-.footer__author_row {
+.footer__column_author {
  position: absolute;
  bottom: 0;
 }
 
-.footer__author {
+.footer__column_author_text {
   color: white;
   margin: 18px 0;
   font-size: 18px;
   line-height: 25px;
 }
 
-
-.footer__columns_info {
+.footer__column_info {
   width: 50%;
   display: flex;
   justify-content: space-between;
 }
 
-.footer__columns_info_margin {
+.footer__column_info_margin {
   margin-left: 40%;
 }
 
-.footer__columns_text {
+.footer__column_info_text {
   color: white;
   margin: 0;
   font-size: 18px;
@@ -417,7 +421,7 @@ a.feynman__link:hover {
   text-align: left;
 }
 
-.footer__columns_text_margin {
+.footer__column_text_margin {
   margin-top: 20px;
   margin-bottom: 16px;
 }
@@ -429,6 +433,16 @@ a.feynman__link:hover {
 .footer__column-link {
   color: white;
   text-decoration: none;
+}
+
+.footer__social-icon {
+  height: 16px;
+  width: 16px;
+}
+
+a.footer__column-link:hover {
+    color: #2f80ed;
+    text-decoration: none;
 }
 
 /* Комментарий из код-ревью: 
@@ -446,16 +460,5 @@ br использовать в таких случаях плохо потому
   list-style-type: none;
   padding: 0;
 }
-
-.footer__social-icon {
-  height: 16px;
-  width: 16px;
-}
-
-a.footer__column-link:hover {
-    color: #2f80ed;
-    text-decoration: none;
-}
-
 
 /* Благодарю за проверку! */
