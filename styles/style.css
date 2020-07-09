@@ -5,26 +5,18 @@
   font-family: 'Helvetica Neue', Arial, sans-serif !important;
 }
 
-/* links, код по ссылкам взят с сайта: https://www.w3schools.com/css/css_link.asp 
-Не уверен, счиитается ли такое заимствование плагиатом. Надеюсь, что нет :) */;
-
-a:visited {
-  color: #2f80ed;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #1f1f1f;
-  text-decoration: none;
-}
-
-/* Дальше уже только мой код */
-
-/* Ещё не до конца понимаю, как правильно использовать БЭМ,
- буду признателен, если сможете дать небольшую наводку. */
-
 .header__link {
   color: #2f80ed;
+  text-decoration: none;
+}
+
+a.header__link:visited {
+  color: #2f80ed;
+  text-decoration: none;
+}
+
+a.header__link:hover {
+  color: #1f1f1f;
   text-decoration: none;
 }
 
@@ -38,25 +30,10 @@ a:hover {
   font-color: #000;
 }
 
-.centered-block {
-  margin: auto;
+.logo {
+  height: 35px;
+  width: 183px;
 }
-
-/* Не совсем понял, что имелось ввиду под 
-"Блок logo, модификатор place со значением footer. Используйте
-повторно компонент из секции header, уникальное изображение
-присвойте модификатору. (стр. 17)"
-Проблема в том, что логотип в хедере и футере - разные картинки.
-
-.logo_image_header {
-  content: url(../images/logo_place_header.svg);
-}
-
-.logo_image_footer {
-  content: url(../images/logo_place_footer.svg);
-}
-
-*/
 
 .logo_place_header {
   position: absolute;
@@ -65,21 +42,14 @@ a:hover {
   z-index: 3;
 }
 
-.logo_yandex_size {
-  height: 35px;
-  width: 183px;
-}
-
 .header__title {
   font-size: 102px;
   font-weight: bold;
   margin-left: 64px;
-  width: 730px;
+  width: 100%;
+  max-width: 730px;
   line-height: 96px;
   z-index: 2;
-}
-
-.header__title_place {
   display: flex;
   align-items: center;
   align-self: center;
@@ -88,7 +58,8 @@ a:hover {
 
 .header__subtitle {
   position: absolute;
-  width: 388px;
+  width: 100%;
+  max-width: 388px;
   left: 64px;
   bottom: 30px;
   font-size: 18px;
@@ -97,8 +68,10 @@ a:hover {
   z-index: 2;
 }
 
-.header__main_illustration {
+.header__main-illustration {
+  object-fit: contain;
   position: absolute;
+  object-position: right;
   width: 765px;
   height: 608px;
   bottom: 0;
@@ -121,11 +94,6 @@ a:hover {
 /* Main content */
 /* Секция, блок description */
 
-p {
-  margin: 0;
-  padding: 0;
-}
-
 .content {
   background-color: white;
   z-index: 1;
@@ -136,6 +104,7 @@ p {
   width: 80%;
   padding: 100px 0;
   justify-content: space-between;
+  margin: auto;
 }
 
 .two-columns__brief {
@@ -237,6 +206,11 @@ p {
 
 /* Секция, блок feynman */
 
+a.feynman__link:hover {
+  color: #1f1f1f;
+  text-decoration: none;
+}
+
 .feynman {
   background-color: #f2f2f2;
   display: flex;
@@ -249,6 +223,7 @@ p {
 .feynman__text_center {
   text-align: center;
   z-index: 2;
+  margin: auto;
 }
 
 .feynman__title_text {
@@ -270,7 +245,7 @@ p {
   z-index: 2;
 }
 
-/* Этот margin нужен, чтобы текст (в моем браузере, как минимум) выглядела как на макете. 
+/* Этот margin нужен, чтобы текст (в моем браузере, как минимум) выглядел как на макете. 
 Можно удалить, если в этом нет необходимости. Этот пункт написан в ответ на комментарий на странице 12:
 "В вашей вёрстке внешний вид секции может отличаться от прототипа. Ссылка может располагаться не на
 одном уровне с подзаголовком." */
@@ -307,9 +282,6 @@ a.feynman__link:hover {
 
 
 /* Секция, блок kaufman */
-/* Если я правильно понимаю, то этот блок полностью можно было использовать на базе секции "digits", 
-но, видимо также нужно оптимизировать код для таблицы, чтобы он был универсальным. 
-Если все так, хочу сначала дождаться Ваших комментариев и исправить все разом. */
 
 .kaufman {
   position: relative;
@@ -405,10 +377,10 @@ a.feynman__link:hover {
   min-height: 250px;
   display: flex;
   width: 90%;
-
+  margin: auto;
 }
 
-.footer__colums_copyright {
+.footer__columns_content_copyright {
   display: block;
   width: 50%;
   position: relative;
@@ -442,6 +414,7 @@ a.feynman__link:hover {
   margin: 0;
   font-size: 18px;
   line-height: 30px;
+  text-align: left;
 }
 
 .footer__columns_text_margin {
@@ -456,6 +429,22 @@ a.feynman__link:hover {
 .footer__column-link {
   color: white;
   text-decoration: none;
+}
+
+/* Комментарий из код-ревью: 
+
+"Не нужно использовать br для переноса строк внутри одного заголовока - для этого обычно ограничивают ширину заголовка и тогда он перенесется на новую строку сам. 
+br использовать в таких случаях плохо потому что если текст в заголовке поменяется - перенос строки или перетрется, или будет работать некорректно.
+Исправить для всех случаев."
+ - я подглядел на VK.com, там боковое меню было сделано через OL (но я использовал UL, что я думаю не так важно в этом случае).
+Как ограничить заголовок я так и не сообразил, потому что в брифе нет точной разметки по длинне, а подбирать % выходит криво.
+Надеюсь это решение тоже верное. :)"
+
+*/
+
+.footer__nav_list {
+  list-style-type: none;
+  padding: 0;
 }
 
 .footer__social-icon {
