@@ -4,8 +4,6 @@
 Надеюсь, на этот раз все в порядке.
 Ещё раз спасибо за ревью. */
 
-
-
 .page {
   min-width: 1100px;
   max-width: 1600px;
@@ -106,7 +104,7 @@ a.header__link:hover {
   z-index: 1;
 }
 
-.two-columns {
+.description {
   display: flex;
   width: 80%;
   padding: 100px 0;
@@ -124,14 +122,9 @@ a.header__link:hover {
   line-height: 1.2;
 }
 
-.two-columns__brief_main-text {
+.two-columns__main-text {
   min-width: 784px;
   width: 80%;
-}
-
-.two-columns__span-accent {
-  font-weight: bold;
-  margin: 30px 0;
 }
 
 .two-columns__paragraph {
@@ -141,6 +134,13 @@ a.header__link:hover {
   line-height: 34px;
 }
 
+.two-columns__span-accent {
+  font-weight: bold;
+}
+
+.two-columns__span-accent_margin {
+  margin: 30px 0;
+}
 
 /* Секция, блок digits */
 
@@ -150,31 +150,31 @@ a.header__link:hover {
   padding: 40px 0;
 }
 
-.digits__text_center {
+.section__title {
+  font-size: 60px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 69px;
   margin: auto;
   width: 60%;
   text-align: center;
 }
 
-.digits__title {
-  font-size: 60px;
-  font-weight: bold;
-  margin: 0;
-  line-height: 69px;
-}
-
-.digits__subtitle {
+.section__subtitle {
   font-size: 24px;
   font-weight: normal;
   margin: 0;
   line-height: 34px;
+  margin: auto;
+  width: 60%;
+  text-align: center;
 }
 
-.digits__block_margin {
+.section__subtitle_margin {
   margin-top: 20px;
 }
 
-.digits__table {
+.table {
   margin: auto;
   width: 1100px;
   display: flex;
@@ -183,12 +183,12 @@ a.header__link:hover {
   flex-wrap: wrap;
 }
 
-.digits__cell {
+.table__cell {
   width: 250px;
   margin: 60px 0;
 }
 
-.digits__table_heading {
+.table__heading {
   margin: 0;
   font-size: 24px;
   font-weight: bold;
@@ -196,14 +196,14 @@ a.header__link:hover {
   line-height: 1.15;
 }
 
-.digits__table_text {
+.table__text {
   margin: 0;
   font-size: 18px;
   font-weight: normal;
   line-height: 1.2;
 }
 
-.digits__table_citation {
+.table__text_citation {
   margin-top: 20px;
 }
 
@@ -217,17 +217,14 @@ a.feynman__link:hover {
 
 .feynman {
   background-color: #f2f2f2;
-  display: flex;
   position: relative;
   width: 100%;
   height: 790px;
   padding-top: 100px;
-}
-
-.feynman__text_center {
-  text-align: center;
-  z-index: 2;
-  margin: auto;
+  background-image: url(../images/feynman.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 867px 637px;
 }
 
 .feynman__title {
@@ -238,6 +235,7 @@ a.feynman__link:hover {
   line-height: 1.15;
   margin-bottom: 70px;
   z-index: 2;
+  text-align: center;
 }
 
 .feynman__subtitle {
@@ -247,20 +245,9 @@ a.feynman__link:hover {
   font-weight: normal;
   line-height: 51px;
   z-index: 2;
+  margin: auto;
+  text-align: center;
 }
-
-/* Этот margin нужен, чтобы текст (в моем браузере, как минимум) выглядел как на макете. 
-Можно удалить, если в этом нет необходимости. Этот пункт написан в ответ на комментарий на странице 12:
-"В вашей вёрстке внешний вид секции может отличаться от прототипа. Ссылка может располагаться не на
-одном уровне с подзаголовком." */
-
-.feynman__subtitle_margin {
-  margin-bottom: 55%
-}
-
-/* ----------------------------- */
-
-
 
 .feynman__link {
   white-space: nowrap;
@@ -274,13 +261,6 @@ a.feynman__link:hover {
 a.feynman__link:hover {
     color: #2f80ed;
     text-decoration: none;
-}
-
-.feynman__bg {
-  background-image: url(../images/feynman.png);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 867px 637px;
 }
 
 
@@ -297,31 +277,7 @@ a.feynman__link:hover {
   z-index: 0;
 }
 
-.kaufman__text_center {
-  margin: auto;
-  width: 60%;
-  text-align: center;
-}
-
-.kaufman__title {
-  font-size: 60px;
-  font-weight: bold;
-  margin: 0;
-  line-height: 69px;
-}
-
-.kaufman__subtitle {
-  font-size: 24px;
-  font-weight: normal;
-  margin: 0;
-  line-height: 34px;
-}
-
-.kaufman__subtitle_margin {
-  margin-top: 20px;
-}
-
-.kaufman__table {
+.table_theme_dark {
   margin: 0 auto;
   width: 1100px;
   display: flex;
@@ -332,12 +288,12 @@ a.feynman__link:hover {
   padding-top: 80px;
 }
 
-.kaufman__cell {
+.table__cell_theme_dark {
   width: 200px;
   margin-bottom: 80px;
 }
 
-.kaufman__table_heading {
+.table__heading_theme_dark {
   margin: 0;
   font-size: 24px;
   font-weight: bold;
@@ -345,7 +301,7 @@ a.feynman__link:hover {
   line-height: 1.15;
 }
 
-.kaufman__table_text {
+.table__text_theme_dark {
   margin: 0;
   font-size: 18px;
   font-weight: normal;
@@ -378,6 +334,19 @@ a.feynman__link:hover {
   margin: auto;
   margin-top: 60px;
   margin-bottom: 40px;
+  justify-content: space-between;
+}
+
+.footer__column {
+  color: white;
+  font-size: 18px;
+  margin: 0;
+}
+
+.logo_place_footer {
+  background-image: url(../images/logo_place_footer.svg); 
+  background-repeat: no-repeat;
+  width: 185px;
 }
 
 .footer__column_content_copyright {
@@ -386,48 +355,44 @@ a.feynman__link:hover {
   position: relative;
 }
 
-.footer__column_author {
- position: absolute;
- bottom: 0;
-}
-
-.footer__column_author_text {
-  color: white;
-  margin: 18px 0;
-  font-size: 18px;
-  line-height: 25px;
-}
-
-.footer__column_info {
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer__column_info_margin {
-  margin-left: 40%;
-}
-
-.footer__column_info_text {
-  color: white;
-  margin: 0;
+.footer__column_content_info {
   font-size: 18px;
   line-height: 30px;
   text-align: left;
 }
 
-.footer__column_text_margin {
+.footer__column_content_social {
+  font-size: 18px;
+  line-height: 30px;
+  text-align: left;
+}
+
+.footer__column_content_author {
+ position: absolute;
+ bottom: 0;
+ margin: 18px 0;
+ line-height: 25px;
+}
+
+.footer__column_content_text-margin {
   margin-top: 20px;
   margin-bottom: 16px;
 }
 
 .footer__column-heading {
   font-weight: bold;
+  margin: 0;
 }
 
-.footer__column-link {
+.footer__column_link {
   color: white;
+  margin: 0;
   text-decoration: none;
+}
+
+a.footer__column_link:hover {
+    color: #2f80ed;
+    text-decoration: none;
 }
 
 .footer__social-icon {
@@ -435,24 +400,7 @@ a.feynman__link:hover {
   width: 16px;
 }
 
-a.footer__column-link:hover {
-    color: #2f80ed;
-    text-decoration: none;
-}
-
-/* Комментарий из код-ревью: 
-
-"Не нужно использовать br для переноса строк внутри одного заголовока - для этого обычно ограничивают ширину заголовка и тогда он перенесется на новую строку сам. 
-br использовать в таких случаях плохо потому что если текст в заголовке поменяется - перенос строки или перетрется, или будет работать некорректно.
-Исправить для всех случаев."
-
- - я подглядел на VK.com, там боковое меню было сделано через OL (но я использовал UL, что, на мой взгляд, не так важно в этом случае).
-Как ограничить заголовок - я так и не сообразил, поскольку в брифе нет точной разметки по длинне, а если подбирать % - выходит криво.
-Надеюсь это решение тоже верное. :)"
-
-*/
-
-.footer__nav_list {
+.footer__nav-list {
   list-style-type: none;
   padding: 0;
 }
