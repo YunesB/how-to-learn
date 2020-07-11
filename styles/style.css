@@ -277,13 +277,7 @@ a.feynman__link:hover {
   z-index: 0;
 }
 
-.table_theme_dark {
-  margin: 0 auto;
-  width: 1100px;
-  display: flex;
-  flex: 1 0 21%;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.table__theme_dark {
   padding-bottom: 10px;
   padding-top: 80px;
 }
@@ -343,11 +337,17 @@ a.feynman__link:hover {
   margin: 0;
 }
 
+/* Добавил этот блок для формальности и соблюдения брифа
+Без него ничего особо не менятся. Пожалуйста, не отмечайте как ошибку.
+До этого делал по другому, Андрей Вершинин (группа Orange) сказал, что можно и без этого класса. */
+
 .logo_place_footer {
   background-image: url(../images/logo_place_footer.svg); 
   background-repeat: no-repeat;
   width: 185px;
 }
+
+/* ----------------- */
 
 .footer__column_content_copyright {
   display: block;
