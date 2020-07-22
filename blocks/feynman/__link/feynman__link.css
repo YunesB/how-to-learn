@@ -11,8 +11,11 @@
   margin-right: 48px;
   z-index: 2;
   right: 0;
-  top: 50%;
+  top: 45%;
 }
+
+/* Top:45%, а не 50%, чтобы выровнять по надписи слева */
+
 
 .feynman__link:hover {
   color: #2f80ed;

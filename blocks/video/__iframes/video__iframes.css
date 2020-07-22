@@ -1,5 +1,7 @@
 .video__iframes {
   display: flex;
-  padding-top: 50px;
   justify-content: center;
+  padding: 0px;
+  padding-top: 50px;
+  list-style-type: none;
 }

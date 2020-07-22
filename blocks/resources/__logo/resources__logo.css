@@ -1,4 +1,17 @@
 .resources__logo {
     width: 270px;
     height: 38px;
+    -moz-transition: all .4s;
+    -webkit-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+    opacity:2;
+    filter:alpha(opacity=100);
+}
+
+.resources__logo:hover {
+    opacity: 1;
+    filter: brightness(1%);
+    transition-timing-function: linear;
 }

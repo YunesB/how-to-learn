@@ -1,16 +1,18 @@
 .khan__link {
-    font-size: 30px;
-    font-weight: normal;
-    line-height: 42px;
-    text-decoration: none;
-    color: #2f80ed;
-    margin-left: 48px;
-    vertical-align: top;
-  }
+  display: flex;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 42px;
+  text-decoration: none;
+  color: #2f80ed;
+  margin-left: 48px;
+  vertical-align: top;
+  height: 100%;
+}
   
-  .khan__link:hover {
-    color: #1f1f1f;
-    text-decoration: none;
-    transition: .4s;
-    opacity: 90%;
-  }
+.khan__link:hover {
+  color: #1f1f1f;
+  text-decoration: none;
+  transition: .4s;
+  opacity: 90%;
+}
