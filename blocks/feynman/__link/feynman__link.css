@@ -1,0 +1,22 @@
+.feynman__link {
+  color: #000;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 51px;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  margin-right: 48px;
+  z-index: 2;
+  right: 0;
+  top: 50%;
+}
+
+.feynman__link:hover {
+  color: #2f80ed;
+  text-decoration: none;
+  transition: .4s;
+  opacity: 90%;
+}
